@@ -326,7 +326,7 @@ angular.module('ngWishlist', ['ngWishlist.directives'])
         }
     }])
 
-    .controller('CartController',['$scope', 'ngWishlist', function($scope, ngWishlist) {
+    .controller('WishlistController',['$scope', 'ngWishlist', function($scope, ngWishlist) {
         $scope.ngWishlist = ngWishlist;
 
     }])
@@ -337,14 +337,14 @@ angular.module('ngWishlist', ['ngWishlist.directives'])
 
 angular.module('ngWishlist.directives', ['ngWishlist.fulfilment'])
 
-    .controller('CartController',['$scope', 'ngWishlist', function($scope, ngWishlist) {
+    .controller('WishlistController',['$scope', 'ngWishlist', function($scope, ngWishlist) {
         $scope.ngWishlist = ngWishlist;
     }])
 
     .directive('ngWishlistAddtocart', ['ngWishlist', function(ngWishlist){
         return {
             restrict : 'E',
-            controller : 'CartController',
+            controller : 'WishlistController',
             scope: {
                 id:'@',
                 name:'@',
@@ -386,7 +386,7 @@ angular.module('ngWishlist.directives', ['ngWishlist.fulfilment'])
     .directive('ngWishlistCart', [function(){
         return {
             restrict : 'E',
-            controller : 'CartController',
+            controller : 'WishlistController',
             scope: {},
             templateUrl: function(element, attrs) {
                 if ( typeof attrs.templateUrl == 'undefined' ) {
@@ -404,7 +404,7 @@ angular.module('ngWishlist.directives', ['ngWishlist.fulfilment'])
     .directive('ngWishlistSummary', [function(){
         return {
             restrict : 'E',
-            controller : 'CartController',
+            controller : 'WishlistController',
             scope: {},
             transclude: true,
             templateUrl: function(element, attrs) {
@@ -420,7 +420,7 @@ angular.module('ngWishlist.directives', ['ngWishlist.fulfilment'])
     .directive('ngWishlistCheckout', [function(){
         return {
             restrict : 'E',
-            controller : ('CartController', ['$rootScope', '$scope', 'ngWishlist', 'fulfilmentProvider', function($rootScope, $scope, ngWishlist, fulfilmentProvider) {
+            controller : ('WishlistController', ['$rootScope', '$scope', 'ngWishlist', 'fulfilmentProvider', function($rootScope, $scope, ngWishlist, fulfilmentProvider) {
                 $scope.ngWishlist = ngWishlist;
 
                 $scope.checkout = function () {
