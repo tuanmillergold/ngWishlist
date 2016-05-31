@@ -1,0 +1,17 @@
+{
+  "name": "ngWishlist",
+  "description": "Shopping Wishlist built for AngularJS",
+  "keywords": ["AngularJS", "module", "directive", "shopping wishlist", "e-commerce", "wishlist", "basket", "shopping"],
+  "authors": {"name":"Tuan Nguyen", "email":"<denny.truongnguyen@gmail.com>", "homepage":"http://www.snapjay.com/"},
+  "version": "1.0.0",
+  "homepage": "http://ngcart.snapjay.com",
+  "license": "MIT",
+  "main": "ngWishlist.js",
+  "private": false,
+  "dependencies": {
+    "angular": ">=1.2.x"
+  },
+  "devDependencies": {
+    "angular-mocks": ">=1.2.x"
+  }
+}
